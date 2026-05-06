@@ -1,4 +1,4 @@
-* {
+{
   box-sizing: border-box;
 }
 
@@ -7,6 +7,7 @@ body {
   font-family: Georgia, serif;
   color: white;
   background: #111;
+  overflow-x: hidden;
 }
 
 .step {
@@ -19,12 +20,16 @@ body {
   overflow: hidden;
 }
 
+/* =========================
+   TEXT BOX
+========================= */
+
 .content {
-  max-width: 650px;
+  max-width: 700px;
   padding: 35px;
   background: rgba(0, 0, 0, 0.65);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 18px;
+  border-radius: 20px;
+  border: 2px solid rgba(255,255,255,0.15);
   z-index: 2;
 }
 
@@ -39,53 +44,106 @@ h2 {
 }
 
 p {
-  font-size: 1.4rem;
-  line-height: 1.6;
+  font-size: 1.3rem;
+  line-height: 1.7;
 }
+
+/* =========================
+   BACKGROUND IMAGES
+========================= */
+
+/* INTRO */
 
 .intro {
-  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.8)), 
-              url("https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1600&q=80");
+  background:
+    linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.8)),
+    url("images/intro.jpg");
+
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
+
+/* STEP 1 */
 
 .wall {
-  background: linear-gradient(to bottom, #3b3b3b, #181818);
+  background:
+    linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.75)),
+    url("images/wall.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
+
+/* STEP 2 */
 
 .breach {
-  background: linear-gradient(to right, #2b0000, #111);
+  background:
+    linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.75)),
+    url("images/breach.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
+
+/* STEP 3 */
 
 .training {
-  background: linear-gradient(to right, #1f2933, #111827);
+  background:
+    linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.75)),
+    url("images/training.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
+
+/* STEP 4 */
 
 .truth {
-  background: linear-gradient(to bottom, #352208, #0f0f0f);
+  background:
+    linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.75)),
+    url("images/truth.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
+
+/* STEP 5 */
 
 .choice {
-  background: linear-gradient(to right, #111, #3a3a3a);
+  background:
+    linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.75)),
+    url("images/choice.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
+
+/* ENDING */
 
 .ending {
-  background: linear-gradient(to bottom, #000, #202020);
+  background:
+    linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.85)),
+    url("images/ending.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-.story-image {
-  width: 360px;
-  max-width: 40%;
-  margin-left: 50px;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,.5);
-}
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
 
 @media screen and (max-width: 800px) {
+
   .step {
-    flex-direction: column;
-    padding: 40px 25px;
+    padding: 40px 20px;
     text-align: center;
   }
 
@@ -94,15 +152,11 @@ p {
   }
 
   h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   p {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
-  .story-image {
-    max-width: 90%;
-    margin: 30px 0 0;
-  }
 }
