@@ -71,35 +71,44 @@ header {
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
 }
 
-/* Sections */
+/* Homepage Content Sections */
+
 .section-light {
   background-color: #f3f3f3;
   color: #222;
-  min-height: 420px;
+  min-height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 80px 10%;
   text-align: center;
 }
 
 .section-dark {
   background-color: #2d2d2d;
   color: white;
-  min-height: 420px;
+  min-height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 80px 10%;
   text-align: center;
 }
 
+.content-box {
+  max-width: 850px;
+}
+
 .content-box h2 {
-  font-size: 2.6rem;
-  margin-bottom: 30px;
+  font-size: 2.8rem;
   font-weight: normal;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
 }
 
 .content-box p {
-  font-size: 1.3rem;
+  font-size: 1.15rem;
+  line-height: 1.9;
 }
 
 /* Footer */
