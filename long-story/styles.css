@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  color: white;
+  background: #111;
+}
+
+.step {
+  min-height: 100vh;
+  padding: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  max-width: 650px;
+  padding: 35px;
+  background: rgba(0, 0, 0, 0.65);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 18px;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 5rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.intro {
+  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.8)), 
+              url("https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.wall {
+  background: linear-gradient(to bottom, #3b3b3b, #181818);
+}
+
+.breach {
+  background: linear-gradient(to right, #2b0000, #111);
+}
+
+.training {
+  background: linear-gradient(to right, #1f2933, #111827);
+}
+
+.truth {
+  background: linear-gradient(to bottom, #352208, #0f0f0f);
+}
+
+.choice {
+  background: linear-gradient(to right, #111, #3a3a3a);
+}
+
+.ending {
+  background: linear-gradient(to bottom, #000, #202020);
+}
+
+.story-image {
+  width: 360px;
+  max-width: 40%;
+  margin-left: 50px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.5);
+}
+
+@media screen and (max-width: 800px) {
+  .step {
+    flex-direction: column;
+    padding: 40px 25px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  .story-image {
+    max-width: 90%;
+    margin: 30px 0 0;
+  }
+}
