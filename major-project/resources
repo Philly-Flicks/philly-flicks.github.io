@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources | Unseen Inequality</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <ul class="nav-left">
+        <li><a href="history.html">HISTORY</a></li>
+        <li><a href="systemic.html">SYSTEMIC</a></li>
+      </ul>
+
+      <div class="logo">
+        <a href="index.html">UNSEEN INEQUALITY</a>
+      </div>
+
+      <ul class="nav-right">
+        <li><a href="modern-issues.html">MODERN ISSUES</a></li>
+        <li><a href="resources.html">RESOURCES</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="resources-page">
+
+    <section class="dark-hero">
+      <h1>RESOURCES</h1>
+      <p>
+        Learning about inequality does not stop with one website. This page brings together articles,
+        educational tools, videos, and starting points for deeper understanding.
+      </p>
+    </section>
+
+    <section class="featured-resource">
+      <div class="featured-resource-image">
+        <img src="images/resources-start.jpg" alt="People learning together">
+      </div>
+
+      <div class="featured-resource-text">
+        <p class="label">START HERE</p>
+        <h2>Continue Learning Beyond This Site</h2>
+        <p>
+          The resources below are meant to help viewers keep learning about history, systemic inequality,
+          civil rights, and ways to stay informed. Use them as starting points for research, reflection,
+          and conversation.
+        </p>
+        <a href="https://nmaahc.si.edu/explore/initiatives/talking-about-race" target="_blank" class="resource-button">
+          Visit Talking About Race
+        </a>
+      </div>
+    </section>
+
+    <section class="resource-card-section">
+      <h2>ARTICLE & LEARNING RESOURCES</h2>
+
+      <div class="resource-card-grid">
+
+        <article class="resource-card">
+          <img src="images/resource-history.jpg" alt="Historical archive materials">
+          <div class="resource-card-content">
+            <p class="label">HISTORY</p>
+            <h3>Smithsonian: Talking About Race</h3>
+            <p>
+              A helpful starting point for learning about race, racism, identity, and conversations around inequality.
+            </p>
+            <a href="https://nmaahc.si.edu/explore/initiatives/talking-about-race" target="_blank">Open Resource</a>
+          </div>
+        </article>
+
+        <article class="resource-card">
+          <img src="images/resource-archive.jpg" alt="Museum archive image">
+          <div class="resource-card-content">
+            <p class="label">ARCHIVES</p>
+            <h3>NMAAHC Digital Resource Guide</h3>
+            <p>
+              A digital guide with history, culture, stories, scholarship, and educational materials.
+            </p>
+            <a href="https://nmaahc.si.edu/explore/nmaahc-digital-resource-guide" target="_blank">Open Resource</a>
+          </div>
+        </article>
+
+        <article class="resource-card">
+          <img src="images/resource-justice.jpg" alt="Justice and law image">
+          <div class="resource-card-content">
+            <p class="label">JUSTICE</p>
+            <h3>Equal Justice Initiative</h3>
+            <p>
+              Resources connecting racial inequality to history, law, criminal justice, and public education.
+            </p>
+            <a href="https://eji.org/racial-justice/" target="_blank">Open Resource</a>
+          </div>
+        </article>
+
+        <article class="resource-card">
+          <img src="images/resource-action.jpg" alt="Community action image">
+          <div class="resource-card-content">
+            <p class="label">ACTION</p>
+            <h3>NAACP Resources</h3>
+            <p>
+              Information on civil rights, advocacy, racial justice, voting rights, and community action.
+            </p>
+            <a href="https://naacp.org/find-resources" target="_blank">Open Resource</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="video-section">
+      <h2>VIDEO LIBRARY</h2>
+      <p>
+        Add videos here that help explain the topics covered on this site. You can include documentaries,
+        interviews, educational explainers, or speeches.
+      </p>
+
+      <div class="video-grid">
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe 
+              src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+              title="YouTube video player"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <h3>Video Title Here</h3>
+          <p>Short description of what this video explains or why it matters.</p>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe 
+              src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+              title="YouTube video player"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <h3>Video Title Here</h3>
+          <p>Short description of what this video explains or why it matters.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="quick-links-section">
+      <h2>MORE WAYS TO LEARN</h2>
+
+      <div class="quick-links">
+        <a href="https://eji.org/public-education/" target="_blank">EJI Public Education</a>
+        <a href="https://naacp.org/know-issues" target="_blank">NAACP: Know the Issues</a>
+        <a href="https://nmaahc.si.edu/explore/nmaahc-digital-resource-guide" target="_blank">NMAAHC Digital Guide</a>
+        <a href="https://nmaahc.si.edu/explore/initiatives/talking-about-race" target="_blank">Talking About Race</a>
+      </div>
+    </section>
+
+    <section class="resources-closing">
+      <h2>KEEP LEARNING. KEEP QUESTIONING.</h2>
+      <p>
+        These resources are only a beginning. Understanding inequality requires continued learning,
+        reflection, and a willingness to look beyond what is immediately visible.
+      </p>
+      <a href="index.html" class="button-link">Back to Home</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>@ 2026 UNSEEN INEQUALITY</p>
+  </footer>
+
+</body>
+</html>
