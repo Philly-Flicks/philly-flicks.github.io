@@ -645,3 +645,23 @@ footer {
     height: auto;
   }
 }
+
+.dark-hero {
+  background-color: #1f1f1f;
+  color: white;
+  text-align: center;
+  padding: 100px 12%;
+}
+
+.dark-hero h1 {
+  font-size: 3.2rem;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.dark-hero p {
+  max-width: 850px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
