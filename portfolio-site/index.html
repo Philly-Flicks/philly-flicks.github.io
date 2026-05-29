@@ -8,25 +8,31 @@
 </head>
 <body>
 
-  <header class="hero">
-    <div class="hero-image">
-      <img src="images/homepage-photo.jpg" alt="Black and white fashion photography">
+  <section class="hero" id="home">
+    <div class="hero-photo">
+      <img src="images/hero-photo.png" alt="Philip Hazeley portfolio hero image" />
     </div>
 
-    <div class="hero-text">
-      <div class="text-box">
-        <h1>PHILIP<br>HAZELEY</h1>
-        <p>MULTIMEDIA CREATOR</p>
+    <div class="hero-content">
+      <h1>PHILIP<br>HAZELEY</h1>
+      <p>MULTIMEDIA CREATOR</p>
 
-        <div class="dropdown">
-          <button id="portfolioBtn">
-            PORTFOLIO <span>▼</span>
-          </button>
-          </div>
-        </div>
-      </div>
+      <a href="#portfolio" class="scroll-link">
+        PORTFOLIO <span>▼</span>
+      </a>
     </div>
-  </header>
+  </section>
+
+  <section class="portfolio-section" id="portfolio">
+    <h2>PORTFOLIO</h2>
+
+    <div class="portfolio-grid">
+      <a href="photography.html" class="portfolio-card">Photography</a>
+      <a href="design.html" class="portfolio-card">Graphic Design</a>
+      <a href="videos.html" class="portfolio-card">Videos / Edits</a>
+      <a href="about.html" class="portfolio-card">About Me</a>
+    </div>
+  </section>
 
   <script src="script.js"></script>
 </body>
