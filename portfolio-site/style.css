@@ -138,6 +138,8 @@ body {
   align-items: center;
   justify-content: center;
   padding: 70px 8%;
+
+  position: relative;
 }
 
 .portfolio-content {
@@ -243,13 +245,19 @@ body {
 }
 
 .back-to-top {
-  display: block;
-  width: fit-content;
-  margin: 55px auto 0;
+  position: absolute;
+
+  bottom: 40px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
   color: white;
   text-decoration: none;
+
   font-size: 1.3rem;
   letter-spacing: 5px;
+
   transition: 0.3s ease;
 }
 
