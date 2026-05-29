@@ -41,53 +41,76 @@ body {
 }
 
 .hero-photo img {
-  height: 115%;
+  height: 105%;
   max-width: none;
   object-fit: contain;
+
+  /* only lowers image */
   transform: translate(-60px, 45px);
+
   filter: grayscale(100%);
 }
 
 .hero-content {
   width: calc(50% - 50px);
   height: calc(100vh - 100px);
+
   margin-top: 50px;
   margin-right: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  border: 1px solid rgba(255,255,255,.45);
+
   display: flex;
   flex-direction: column;
+
   padding: 70px 30px;
   position: relative;
 }
 
-.hero-content h1 {
-  font-size: clamp(4rem, 8vw, 7rem);
-  line-height: 0.9;
-  font-weight: 900;
-  letter-spacing: -5px;
-  transform: translateX(-4px);
-}
-
-.hero-content p {
-  margin-top: 18px;
+.top-title,
+.portfolio-title {
   font-size: 1.3rem;
   letter-spacing: 8px;
   font-weight: 300;
 }
 
+.top-title {
+  margin-bottom: 18px;
+}
+
+.portfolio-title {
+  margin-top: 18px;
+}
+
+.hero-content h1 {
+  font-size: clamp(4rem, 8vw, 7rem);
+  line-height: .9;
+  font-weight: 900;
+  letter-spacing: -5px;
+
+  /* tiny adjustment left */
+  transform: translateX(-4px);
+}
+
 .scroll-link {
   position: absolute;
-  bottom: 95px;
+
+  /* lower in the box */
+  bottom: 45px;
+
   left: 30px;
+
   color: white;
   text-decoration: none;
+
   font-size: 1.3rem;
   letter-spacing: 5px;
-  transition: 0.3s ease;
+
+  transition: .3s ease;
 }
 
 .scroll-link:hover {
-  opacity: 0.55;
+  opacity: .55;
 }
 
 /* ABOUT PAGE */
