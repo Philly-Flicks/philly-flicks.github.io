@@ -1,6 +1,11 @@
-const portfolioBtn = document.getElementById("portfolioBtn");
-const portfolioMenu = document.getElementById("portfolioMenu");
+const scrollLink = document.querySelector(".scroll-link");
 
-portfolioBtn.addEventListener("click", () => {
-  portfolioMenu.classList.toggle("show");
+scrollLink.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  const portfolioSection = document.querySelector("#portfolio");
+
+  portfolioSection.scrollIntoView({
+    behavior: "smooth"
+  });
 });
