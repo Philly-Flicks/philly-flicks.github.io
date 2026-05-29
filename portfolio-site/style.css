@@ -32,16 +32,17 @@ body {
 }
 
 .hero-photo img {
-  height: 95%;
-  max-width: 115%;
+  height: 115%;
+  max-width: none;
   object-fit: contain;
-  transform: translateX(-35px);
+  transform: translateX(-80px);
   filter: grayscale(100%);
 }
 
 .hero-content {
   width: 50%;
-  height: 100%;
+  height: calc(100% - 60px);
+  margin-top: 60px;
   border: 1px solid rgba(255, 255, 255, 0.45);
   border-bottom: none;
   display: flex;
