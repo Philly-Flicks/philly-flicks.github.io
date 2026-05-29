@@ -4,151 +4,159 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: white;
+  background: #000;
   color: white;
 }
 
 .hero {
-  min-height: 72vh;
+  width: 100%;
+  height: 100vh;
+  background: #050505;
   display: flex;
-  background: linear-gradient(to bottom, #050505, #111);
-}
-
-.hero-image {
-  width: 50%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  position: relative;
   overflow: hidden;
 }
 
-.hero-image img {
-  width: 100%;
+.hero-photo {
+  width: 50%;
   height: 100%;
-  object-fit: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.hero-photo img {
+  height: 95%;
+  max-width: 115%;
+  object-fit: contain;
+  transform: translateX(-35px);
   filter: grayscale(100%);
 }
 
-.hero-text {
+.hero-content {
   width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px;
-}
-
-.text-box {
+  height: 100%;
   border: 1px solid rgba(255, 255, 255, 0.45);
-  width: 100%;
-  max-width: 570px;
-  height: 520px;
-  padding: 35px 22px;
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 70px 30px;
   position: relative;
 }
 
-h1 {
-  font-size: clamp(3.5rem, 8vw, 6.5rem);
+.hero-content h1 {
+  font-size: clamp(4rem, 8vw, 7rem);
   line-height: 0.9;
   font-weight: 900;
-  letter-spacing: -4px;
+  letter-spacing: -5px;
 }
 
-.line {
-  width: 75%;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.65);
-  margin: 12px 0;
-}
-
-.text-box p {
+.hero-content p {
+  margin-top: 18px;
   font-size: 1.3rem;
   letter-spacing: 8px;
   font-weight: 300;
 }
 
-.dropdown {
+.scroll-link {
   position: absolute;
-  left: 22px;
-  bottom: 120px;
-}
-
-#portfolioBtn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.3rem;
-  letter-spacing: 5px;
-  cursor: pointer;
-}
-
-.dropdown-menu {
-  display: none;
-  flex-direction: column;
-  margin-top: 15px;
-  background: rgba(0, 0, 0, 0.9);
-  border: 1px solid white;
-  min-width: 220px;
-}
-
-.dropdown-menu a {
+  bottom: 95px;
+  left: 30px;
   color: white;
   text-decoration: none;
-  padding: 14px 18px;
-  letter-spacing: 2px;
-  font-size: 0.9rem;
-  transition: 0.3s;
+  font-size: 1.3rem;
+  letter-spacing: 5px;
+  transition: 0.3s ease;
 }
 
-.dropdown-menu a:hover {
+.scroll-link:hover {
+  opacity: 0.6;
+}
+
+.portfolio-section {
+  min-height: 100vh;
   background: white;
   color: black;
+  padding: 80px 8%;
 }
 
-.dropdown-menu.show {
+.portfolio-section h2 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  margin-bottom: 40px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.portfolio-card {
+  min-height: 250px;
+  border: 2px solid black;
+  color: black;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
   display: flex;
+  align-items: flex-end;
+  padding: 25px;
+  transition: 0.3s ease;
+}
+
+.portfolio-card:hover {
+  background: black;
+  color: white;
 }
 
 /* Mobile */
 @media screen and (max-width: 800px) {
   .hero {
     flex-direction: column;
-    min-height: 100vh;
   }
 
-  .hero-image,
-  .hero-text {
+  .hero-photo {
     width: 100%;
+    height: 45%;
   }
 
-  .hero-image {
-    height: 45vh;
+  .hero-photo img {
+    height: 100%;
+    transform: translateX(-15px);
   }
 
-  .hero-text {
-    padding: 20px;
+  .hero-content {
+    width: 100%;
+    height: 55%;
+    padding: 35px 22px;
+    border-left: none;
+    border-right: none;
   }
 
-  .text-box {
-    height: auto;
-    min-height: 430px;
-  }
-
-  h1 {
+  .hero-content h1 {
     font-size: 4rem;
     letter-spacing: -2px;
   }
 
-  .text-box p {
-    font-size: 0.9rem;
+  .hero-content p {
+    font-size: 0.85rem;
     letter-spacing: 5px;
   }
 
-  .dropdown {
-    position: relative;
-    left: 0;
-    bottom: auto;
-    margin-top: 120px;
+  .scroll-link {
+    bottom: 55px;
+    left: 22px;
+    font-size: 1rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
   }
 }
