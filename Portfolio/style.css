@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: white;
+  color: white;
+}
+
+.hero {
+  min-height: 72vh;
+  display: flex;
+  background: linear-gradient(to bottom, #050505, #111);
+}
+
+.hero-image {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.hero-text {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.text-box {
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  width: 100%;
+  max-width: 570px;
+  height: 520px;
+  padding: 35px 22px;
+  position: relative;
+}
+
+h1 {
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  line-height: 0.9;
+  font-weight: 900;
+  letter-spacing: -4px;
+}
+
+.line {
+  width: 75%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.65);
+  margin: 12px 0;
+}
+
+.text-box p {
+  font-size: 1.3rem;
+  letter-spacing: 8px;
+  font-weight: 300;
+}
+
+.dropdown {
+  position: absolute;
+  left: 22px;
+  bottom: 120px;
+}
+
+#portfolioBtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  letter-spacing: 5px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  margin-top: 15px;
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid white;
+  min-width: 220px;
+}
+
+.dropdown-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 18px;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background: white;
+  color: black;
+}
+
+.dropdown-menu.show {
+  display: flex;
+}
+
+/* Mobile */
+@media screen and (max-width: 800px) {
+  .hero {
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .hero-image,
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-image {
+    height: 45vh;
+  }
+
+  .hero-text {
+    padding: 20px;
+  }
+
+  .text-box {
+    height: auto;
+    min-height: 430px;
+  }
+
+  h1 {
+    font-size: 4rem;
+    letter-spacing: -2px;
+  }
+
+  .text-box p {
+    font-size: 0.9rem;
+    letter-spacing: 5px;
+  }
+
+  .dropdown {
+    position: relative;
+    left: 0;
+    bottom: auto;
+    margin-top: 120px;
+  }
+}
