@@ -41,12 +41,12 @@ body {
 }
 
 .hero-photo img {
-  height: 105%;
+  height: 135%;
   max-width: none;
   object-fit: contain;
 
   /* only lowers image */
-  transform: translate(-60px, 45px);
+  transform: translate(-55px, 200px);
 
   filter: grayscale(100%);
 }
