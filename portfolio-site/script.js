@@ -1,11 +1,47 @@
-const scrollLink = document.querySelector(".scroll-link");
+const links = document.querySelectorAll('a[href^="#"]');
 
-scrollLink.addEventListener("click", function (event) {
-  event.preventDefault();
+links.forEach(link => {
+  link.addEventListener("click", function (event) {
+    event.preventDefault();
 
-  const portfolioSection = document.querySelector("#portfolio");
+    const target = document.querySelector(this.getAttribute("href"));
 
-  portfolioSection.scrollIntoView({
-    behavior: "smooth"
+    target.scrollIntoView({
+      behavior: "smooth"
+    });
   });
+});
+
+let lastScrollY = window.scrollY;
+
+const animatedItems = document.querySelectorAll(".animate");
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      const scrollingDown = window.scrollY > lastScrollY;
+
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        entry.target.classList.remove("up");
+      } else {
+        entry.target.classList.remove("show");
+
+        if (!scrollingDown) {
+          entry.target.classList.add("up");
+        } else {
+          entry.target.classList.remove("up");
+        }
+      }
+
+      lastScrollY = window.scrollY;
+    });
+  },
+  {
+    threshold: 0.35
+  }
+);
+
+animatedItems.forEach(item => {
+  observer.observe(item);
 });
