@@ -94,7 +94,7 @@ body {
 }
 
 .collection-card {
-  height: 260px;
+  height: 800px;
   position: relative;
   overflow: hidden;
   text-decoration: none;
@@ -138,7 +138,7 @@ body {
 
 .back-link {
   position: absolute;
-  bottom: 35px;
+  bottom: -40px;
   left: 50%;
   transform: translateX(-50%);
   color: black;
