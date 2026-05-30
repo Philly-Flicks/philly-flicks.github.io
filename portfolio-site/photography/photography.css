@@ -86,6 +86,7 @@ body {
   font-weight: 900;
   letter-spacing: -5px;
   margin-bottom: 35px;
+  transform: translateX(-10px)
 }
 
 .collections-grid {
@@ -140,9 +141,9 @@ body {
 
 .back-link {
   position: absolute;
-  bottom: 1700px;
+  bottom: 1552px;
   left: 9%;
-  transform: translateX(-50%);
+  transform: translateX(-52%);
   color: black;
   text-decoration: none;
   font-size: 1.3rem;
