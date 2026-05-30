@@ -194,11 +194,13 @@ body {
 }
 
 .about-container .about-nav:first-child {
-  margin-bottom: 2px;
+  margin-bottom: 12px;
+  margin-left: -585px;
 }
 
 .about-container .about-nav:last-child {
-  margin-top: 2px;
+  margin-top: 12px;
+  margin-left: -585px; 
 }
 
 /* PORTFOLIO PAGE */
