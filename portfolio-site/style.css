@@ -175,7 +175,7 @@ body {
   max-width: none;
   object-fit: contain;
   filter: grayscale(100%);
-  transform: translateY(50px);
+  transform: translate(150px, 50px);
 }
 
 .about-nav {
