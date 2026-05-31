@@ -6,9 +6,12 @@ links.forEach(link => {
 
     const target = document.querySelector(this.getAttribute("href"));
 
-    target.scrollIntoView({
-      behavior: "smooth"
-    });
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
   });
 });
 
@@ -25,7 +28,7 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.35
+    threshold: 0.2
   }
 );
 
