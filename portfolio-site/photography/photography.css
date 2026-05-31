@@ -6,7 +6,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 }
 
 body {
@@ -16,11 +16,11 @@ body {
   overflow-y: scroll;
 }
 
-.photo-page {
+.photo-page,
+.gallery-section {
   min-height: 100vh;
   width: 100%;
   scroll-snap-align: start;
-  scroll-snap-stop: always;
 }
 
 /* TOP PHOTOGRAPHY PAGE */
