@@ -352,3 +352,26 @@ body {
 .gallery-arrows a:hover {
     opacity: 0.55;
 }
+
+/* ADD 10 - BACK TO COLLECTIONS */
+
+.back-to-collections {
+    display: block;
+
+    width: fit-content;
+
+    margin: 40px auto 0;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 1.3rem;
+    letter-spacing: 5px;
+    font-weight: 300;
+
+    transition: 0.3s ease;
+}
+
+.back-to-collections:hover {
+    opacity: 0.55;
+}
