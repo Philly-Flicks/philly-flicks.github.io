@@ -45,12 +45,18 @@ body {
 }
 
 .take-look {
+  position: absolute;
+
+  right: 50px;
+  bottom: 50px;
+
   color: white;
   text-decoration: none;
+
   font-size: 1.3rem;
   letter-spacing: 5px;
   font-weight: 300;
-  transform: translateY(40px);
+
   transition: 0.3s ease;
 }
 
@@ -142,13 +148,17 @@ body {
 
 .back-link {
   position: absolute;
-  left: 17%;
-  transform: translateY(428px);
+
+  left: 50px;
+  bottom: 50px;
+
   color: white;
   text-decoration: none;
+
   font-size: 1.3rem;
   letter-spacing: 5px;
   font-weight: 300;
+
   transition: 0.3s ease;
 }
 
