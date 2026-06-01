@@ -171,11 +171,11 @@ body {
 }
 
 .about-photo img {
-  height: 125%;
+  height: 155%;
   max-width: none;
   object-fit: contain;
   filter: grayscale(100%);
-  transform: translate(150px, 50px);
+  transform: translate(15px, 55px);
 }
 
 .about-nav {
