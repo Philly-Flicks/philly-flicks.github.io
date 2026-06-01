@@ -36,7 +36,7 @@ animatedItems.forEach(item => {
   observer.observe(item);
 });
 
-// ADD 4 - LIGHTBOX POPUP GALLERY
+// ADD 12 - LIGHTBOX POPUP GALLERY WITH COUNTER + LOADING
 
 const galleryImages = document.querySelectorAll(".gallery-grid img");
 const lightbox = document.getElementById("lightbox");
@@ -44,6 +44,8 @@ const lightboxImg = document.getElementById("lightbox-img");
 const closeBtn = document.querySelector(".lightbox-close");
 const prevBtn = document.querySelector(".lightbox-prev");
 const nextBtn = document.querySelector(".lightbox-next");
+const counter = document.getElementById("lightbox-counter");
+const loader = document.getElementById("loader");
 
 let currentGallery = [];
 let currentIndex = 0;
@@ -51,6 +53,7 @@ let currentIndex = 0;
 galleryImages.forEach(image => {
   image.addEventListener("click", () => {
     const gallery = image.closest(".gallery-grid");
+
     currentGallery = Array.from(gallery.querySelectorAll("img"));
     currentIndex = currentGallery.indexOf(image);
 
@@ -60,11 +63,29 @@ galleryImages.forEach(image => {
 
 function openLightbox() {
   lightbox.classList.add("show");
-  lightboxImg.src = currentGallery[currentIndex].src;
+  document.body.style.overflow = "hidden";
+  showImage();
 }
 
 function closeLightbox() {
   lightbox.classList.remove("show");
+  document.body.style.overflow = "auto";
+}
+
+function showImage() {
+  loader.classList.add("show");
+  lightboxImg.classList.remove("loaded");
+
+  const selectedImage = currentGallery[currentIndex];
+
+  lightboxImg.onload = () => {
+    loader.classList.remove("show");
+    lightboxImg.classList.add("loaded");
+  };
+
+  lightboxImg.src = selectedImage.src;
+
+  counter.textContent = `${currentIndex + 1} / ${currentGallery.length}`;
 }
 
 function showNextImage() {
@@ -74,7 +95,7 @@ function showNextImage() {
     currentIndex = 0;
   }
 
-  lightboxImg.src = currentGallery[currentIndex].src;
+  showImage();
 }
 
 function showPrevImage() {
@@ -84,7 +105,7 @@ function showPrevImage() {
     currentIndex = currentGallery.length - 1;
   }
 
-  lightboxImg.src = currentGallery[currentIndex].src;
+  showImage();
 }
 
 closeBtn.addEventListener("click", closeLightbox);
