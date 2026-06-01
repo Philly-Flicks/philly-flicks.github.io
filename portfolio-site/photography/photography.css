@@ -477,8 +477,8 @@ body {
 
   .back-link {
     left: 22px;
-    transform: translateY(470px);
-    font-size: 0.85rem;
+    transform: translateY(280px);
+    font-size: 0.9rem;
     letter-spacing: 4px;
   }
 
