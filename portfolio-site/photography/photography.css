@@ -142,10 +142,9 @@ body {
 
 .back-link {
   position: absolute;
-  bottom: 1552px;
-  left: 9%;
-  transform: translateX(-52%);
-  color: black;
+  left: 17%;
+  transform: translateY(428px);
+  color: white;
   text-decoration: none;
   font-size: 1.3rem;
   letter-spacing: 5px;
