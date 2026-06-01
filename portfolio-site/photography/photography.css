@@ -325,3 +325,30 @@ body {
 .lightbox-next {
   right: 40px;
 }
+
+/* ADD 9 - TITLE ARROWS */
+
+.gallery-heading {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.gallery-arrows {
+    display: flex;
+    gap: 12px;
+
+    font-size: 1.5rem;
+    letter-spacing: normal;
+}
+
+.gallery-arrows a {
+    color: white;
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.gallery-arrows a:hover {
+    opacity: 0.55;
+}
