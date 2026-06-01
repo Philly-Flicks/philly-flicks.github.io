@@ -128,7 +128,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0,0,0,0.1);
   transition: 0.4s ease;
 }
 
@@ -137,7 +137,7 @@ body {
 }
 
 .collection-card:hover::after {
-  background: rgba(0,0,0,0.65);
+  background: rgba(0,0,0,0.35);
 }
 
 .back-link {
