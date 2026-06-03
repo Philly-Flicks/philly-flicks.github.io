@@ -51,7 +51,7 @@ body {
 }
 
 .contact-card {
-  height: 260px;
+  height: 75px;
 
   border: 1px solid rgba(255,255,255,0.55);
 
@@ -63,10 +63,10 @@ body {
   font-weight: 700;
 
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-
-  padding: 25px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0px;
 
   transition: 0.3s ease;
 }
