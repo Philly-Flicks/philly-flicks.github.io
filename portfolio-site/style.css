@@ -203,6 +203,50 @@ body {
   margin-left: -800px; 
 }
 
+/* ADD 32 - SKILLS */
+
+.skills-title {
+  margin-top: 50px;
+  margin-bottom: 20px;
+
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 900;
+  letter-spacing: -3px;
+
+  line-height: 0.9;
+}
+
+.skills-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+}
+
+.skill-card {
+  border: 1px solid rgba(0,0,0,.45);
+
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  font-size: 0.95rem;
+  letter-spacing: 3px;
+  font-weight: 700;
+
+  transition: 0.3s ease;
+}
+
+.skill-card:hover {
+  background: black;
+  color: white;
+}
+
 /* PORTFOLIO PAGE */
 
 .portfolio-section {
@@ -353,6 +397,21 @@ body {
 
 .about-nav {
   font-size: 1rem;
+}
+
+.skills-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.skill-card {
+  height: 70px;
+
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+}
+
+.skills-title {
+  font-size: 3rem;
 }
   
 }
