@@ -45,3 +45,15 @@ const observer = new IntersectionObserver(
 animatedItems.forEach(item => {
   observer.observe(item);
 });
+
+// ADD 33 - DISABLE RIGHT CLICK + IMAGE DRAG
+
+document.addEventListener("contextmenu", event => {
+  if (event.target.tagName === "IMG") {
+    event.preventDefault();
+  }
+});
+
+document.querySelectorAll("img").forEach(img => {
+  img.setAttribute("draggable", "false");
+});

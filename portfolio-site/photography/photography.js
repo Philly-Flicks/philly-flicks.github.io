@@ -133,3 +133,29 @@ document.addEventListener("keydown", event => {
     closeLightbox();
   }
 });
+
+// ADD 33 - DISABLE RIGHT CLICK + IMAGE DRAG
+
+document.addEventListener("contextmenu", event => {
+  if (event.target.tagName === "IMG") {
+    event.preventDefault();
+  }
+});
+
+document.querySelectorAll("img").forEach(img => {
+  img.setAttribute("draggable", "false");
+});
+
+// ADD 33 - RANDOMIZE PHOTOGRAPHY GALLERIES
+
+const photoGalleries = document.querySelectorAll(".gallery-grid");
+
+photoGalleries.forEach(gallery => {
+  const images = Array.from(gallery.querySelectorAll("img"));
+
+  const shuffledImages = images.sort(() => Math.random() - 0.5);
+
+  shuffledImages.forEach(image => {
+    gallery.appendChild(image);
+  });
+});

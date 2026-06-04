@@ -436,3 +436,14 @@ body {
 .back-to-top:hover {
   opacity: 0.55;
 }
+
+/* ADD 33 - IMAGE PROTECTION */
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+body {
+  -webkit-touch-callout: none;
+}
