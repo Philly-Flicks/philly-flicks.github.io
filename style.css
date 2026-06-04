@@ -462,28 +462,39 @@ body {
 
   .hero-photo {
     width: 100%;
-    height: 42vh;
-    align-items: flex-end;
+    height: 52vh;
+
+    display: flex;
     justify-content: center;
-  }
+    align-items: flex-end;
 
-  .hero-photo img {
-    height: 100%;
-    max-width: 100%;
-    transform: translate(0, 0);
+    position: relative;
+    z-index: 1;
+}
+
+.hero-photo img {
+    height: 125%;
+    width: auto;
+
     object-fit: contain;
-  }
 
-  .hero-content {
+    transform: translateY(90px);
+
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
     width: calc(100% - 40px);
-    height: auto;
-    min-height: 48vh;
 
-    margin: 0 20px 30px 20px;
+    margin: -120px 20px 30px;
     padding: 35px 22px;
 
     border: 1px solid rgba(255,255,255,.45);
-  }
+}
 
   .top-title,
   .portfolio-title {
