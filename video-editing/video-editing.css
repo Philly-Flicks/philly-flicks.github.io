@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #050505;
+  color: white;
+  overflow-y: scroll;
+}
+
+.video-page,
+.gallery-section {
+  min-height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* HERO */
+
+.hero-section {
+  background: #050505;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content h1 {
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  line-height: 0.9;
+  font-weight: 900;
+  letter-spacing: -5px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.hero-video {
+  width: 100%;
+  height: 62vh;
+  margin-top: 40px;
+  overflow: hidden;
+  border: 1px solid white;
+}
+
+.hero-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-image {
+  width: 100%;
+  height: 55vh;
+  margin-top: 30px;
+  overflow: hidden;
+  border: 1px solid white;
+}
+
+.take-look,
+.back-link {
+  position: absolute;
+  bottom: 50px;
+
+  color: white;
+  text-decoration: none;
+
+  font-size: 1.3rem;
+  letter-spacing: 5px;
+  font-weight: 300;
+
+  transition: 0.3s ease;
+}
+
+.take-look {
+  right: 50px;
+}
+
+.back-link {
+  left: 50px;
+}
+
+.take-look:hover,
+.back-link:hover {
+  opacity: 0.55;
+}
+
+/* SELECTED WORK */
+
+.selected-section {
+  background: white;
+  color: black;
+  padding: 50px;
+  position: relative;
+}
+
+.selected-content h2 {
+  font-size: clamp(4rem, 10vw, 8rem);
+  line-height: 0.9;
+  font-weight: 900;
+  letter-spacing: -5px;
+  margin-bottom: 35px;
+  transform: translateX(-10px);
+}
+
+.selected-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.selected-card {
+  height: 745px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  border: 1px solid black;
+  background: #050505;
+}
+
+.card-preview {
+  width: 100%;
+  height: 100%;
+  transition: 0.4s ease;
+}
+
+.youtube-preview {
+  background:
+    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+    url("images/youtube-edits.jpg") center/cover;
+}
+
+.character-preview {
+  background:
+    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+    url("images/character-edits.jpg") center/cover;
+}
+
+.selected-card h3 {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.selected-card:hover .card-preview {
+  transform: scale(1.06);
+  opacity: 0.7;
+}
+
+/* GALLERIES */
+
+.gallery-section {
+  background: #050505;
+  color: white;
+  padding: 60px 50px;
+}
+
+.gallery-heading {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 900;
+  letter-spacing: -5px;
+  margin-bottom: 30px;
+}
+
+.gallery-arrows {
+  display: flex;
+  gap: 12px;
+  font-size: 1.5rem;
+  letter-spacing: normal;
+}
+
+.gallery-arrows a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.gallery-arrows a:hover {
+  opacity: 0.55;
+}
+
+.youtube-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.youtube-grid iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid white;
+}
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+.character-grid video {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  object-fit: contain;
+
+  border: 1px solid white;
+  background: black;
+}
+
+.back-to-selected {
+  display: block;
+  width: fit-content;
+  margin: 40px auto 0;
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  letter-spacing: 5px;
+  font-weight: 300;
+  transition: 0.3s ease;
+}
+
+.back-to-selected:hover {
+  opacity: 0.55;
+}
+
+/* ANIMATIONS */
+
+.animate {
+  opacity: 0;
+  transform: translateY(45px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 900px) {
+  .hero-section,
+  .selected-section,
+  .gallery-section {
+    padding: 35px 20px;
+  }
+
+  .hero-content h1,
+  .selected-content h2,
+  .gallery-heading {
+    font-size: 4rem;
+    letter-spacing: -2px;
+    white-space: normal;
+  }
+
+  .take-look,
+  .back-link,
+  .back-to-selected {
+    font-size: 1rem;
+    letter-spacing: 4px;
+  }
+
+  .hero-video {
+    height: 55vh;
+  }
+
+  .selected-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .selected-card {
+    height: 220px;
+  }
+
+  .selected-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .youtube-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .character-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

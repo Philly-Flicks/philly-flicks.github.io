@@ -1,0 +1,437 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: white;
+  color: black;
+  overflow-y: scroll;
+}
+
+.design-page,
+.gallery-section {
+  min-height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* HERO */
+
+.hero-section {
+  background: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content h1 {
+  font-size: clamp(3.5rem, 8vw, 8rem);
+  line-height: 0.9;
+  font-weight: 900;
+  letter-spacing: -5px;
+  margin-bottom: 15px;
+
+  white-space: nowrap;
+}
+
+.hero-image {
+  width: 100%;
+  height: 62vh;
+  margin-top: 40px;
+  overflow: hidden;
+  border: 1px solid black;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.take-look,
+.back-link {
+  color: black;
+  text-decoration: none;
+  font-size: 1.3rem;
+  letter-spacing: 5px;
+  font-weight: 300;
+  transition: 0.3s ease;
+}
+
+.take-look {
+  position: absolute;
+
+  right: 50px;
+  bottom: 50px;
+
+  color: black;
+  text-decoration: none;
+
+  font-size: 1.3rem;
+  letter-spacing: 5px;
+  font-weight: 300;
+
+  transition: 0.3s ease;
+}
+
+.back-link {
+  position: absolute;
+
+  left: 50px;
+  bottom: 50px;
+
+  color: black;
+  text-decoration: none;
+
+  font-size: 1.3rem;
+  letter-spacing: 5px;
+  font-weight: 300;
+
+  transition: 0.3s ease;
+}
+
+.take-look:hover,
+.back-link:hover {
+  opacity: 0.55;
+}
+
+/* SELECTED WORK */
+
+.selected-section {
+  background: #050505;
+  color: white;
+  padding: 50px;
+  position: relative;
+}
+
+.selected-content h2 {
+  font-size: clamp(4rem, 10vw, 8rem);
+  line-height: 0.9;
+  font-weight: 900;
+  letter-spacing: -5px;
+  margin-bottom: 35px;
+  transform: translateX(-10px);
+}
+
+.selected-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.selected-card {
+  height: 360px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+}
+
+.selected-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(1.1) contrast(1.08);
+  transition: 0.4s ease;
+}
+
+.selected-card h3 {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.selected-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.15);
+  transition: 0.4s ease;
+}
+
+.selected-card:hover img {
+  transform: scale(1.06);
+}
+
+.selected-card:hover::after {
+  background: rgba(0,0,0,0.45);
+}
+
+/* GALLERIES */
+
+.gallery-section {
+  background: white;
+  color: black;
+  padding: 60px 50px;
+}
+
+.gallery-heading {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 900;
+  letter-spacing: -5px;
+  margin-bottom: 30px;
+}
+
+.gallery-arrows {
+  display: flex;
+  gap: 12px;
+  font-size: 1.5rem;
+  letter-spacing: normal;
+}
+
+.gallery-arrows a {
+  color: black;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.gallery-arrows a:hover {
+  opacity: 0.55;
+}
+
+.gallery-grid {
+  column-count: 4;
+  column-gap: 14px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  margin-bottom: 14px;
+
+  border: 1px solid black;
+
+  transition: 0.3s ease;
+  cursor: pointer;
+
+  break-inside: avoid;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.025);
+}
+
+.back-to-selected {
+  display: block;
+  width: fit-content;
+  margin: 40px auto 0;
+  color: black;
+  text-decoration: none;
+  font-size: 1.3rem;
+  letter-spacing: 5px;
+  font-weight: 300;
+  transition: 0.3s ease;
+}
+
+.back-to-selected:hover {
+  opacity: 0.55;
+}
+
+/* LIGHTBOX */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.94);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.lightbox.show {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 82%;
+  max-height: 82%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox img.loaded {
+  opacity: 1;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.lightbox-arrow {
+  position: absolute;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.lightbox-prev {
+  left: 40px;
+}
+
+.lightbox-next {
+  right: 40px;
+}
+
+.lightbox-arrow:hover,
+.lightbox-close:hover {
+  opacity: 0.55;
+}
+
+.lightbox-counter {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 4px;
+  font-weight: 300;
+}
+
+.loader {
+  width: 45px;
+  height: 45px;
+  border: 2px solid rgba(255,255,255,0.25);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  position: absolute;
+  display: none;
+}
+
+.loader.show {
+  display: block;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ANIMATIONS */
+
+.animate {
+  opacity: 0;
+  transform: translateY(45px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 900px) {
+  .hero-section,
+  .selected-section,
+  .gallery-section {
+    padding: 35px 20px;
+  }
+
+  .hero-content h1,
+  .selected-content h2,
+  .gallery-heading {
+    font-size: 4rem;
+    letter-spacing: -2px;
+  }
+
+  .take-look,
+  .back-link,
+  .back-to-selected {
+    font-size: 1rem;
+    letter-spacing: 4px;
+  }
+
+  .hero-image {
+    height: 55vh;
+  }
+
+  .selected-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .selected-card {
+    height: 170px;
+  }
+
+  .selected-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .gallery-grid {
+  column-count: 2;
+}
+
+  .gallery-grid img {
+    height: 180px;
+  }
+
+  .lightbox img {
+    max-width: 90%;
+    max-height: 70%;
+  }
+
+  .lightbox-prev {
+    left: 15px;
+  }
+
+  .lightbox-next {
+    right: 15px;
+  }
+
+  .lightbox-arrow {
+    font-size: 1.8rem;
+  }
+}
+
+/* ADD 33 - IMAGE PROTECTION */
+
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+body {
+  -webkit-touch-callout: none;
+}
