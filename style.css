@@ -570,3 +570,12 @@ body {
   }
 
 }
+
+@media screen and (max-width: 600px) {
+
+  .hero-photo,
+  .hero-image {
+    display: none;
+  }
+
+}
