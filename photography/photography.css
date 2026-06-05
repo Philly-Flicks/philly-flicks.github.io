@@ -182,22 +182,47 @@ body {
 /* MOBILE */
 
 @media screen and (max-width: 900px) {
-  .hero-section,
-  .collections-section {
-    padding: 35px 20px;
-  }
+  .hero-section {
+  padding: 35px 20px 95px;
+  min-height: 100vh;
+
+  justify-content: flex-start;
+
+  position: relative;
+}
+
+.collections-section {
+  padding: 35px 20px;
+}
 
   .hero-content h1,
-  .collections-content h2 {
-    font-size: 4rem;
-    letter-spacing: -2px;
-  }
+.collections-content h2 {
+  font-size: clamp(3rem, 13vw, 4rem);
+  letter-spacing: -2px;
+  line-height: 0.9;
+  white-space: nowrap;
+}
 
   .take-look,
-  .back-link {
-    font-size: 1rem;
-    letter-spacing: 4px;
-  }
+.back-link {
+  position: absolute;
+  bottom: 35px;
+
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+
+  white-space: nowrap;
+
+  transform: none;
+}
+
+.back-link {
+  left: 20px;
+}
+
+.take-look {
+  right: 20px;
+}
 
   .hero-image {
     height: 55vh;
