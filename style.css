@@ -579,3 +579,34 @@ body {
   }
 
 }
+
+/* ADD 37 - MOBILE PORTFOLIO BACK TO TOP FIX */
+
+@media screen and (max-width: 600px) {
+
+  .portfolio-section {
+    min-height: 100vh;
+    height: auto;
+
+    padding-bottom: 120px;
+
+    overflow: visible;
+  }
+
+  .back-to-top {
+    position: static;
+
+    display: block;
+    width: fit-content;
+
+    margin: 50px auto 0;
+
+    transform: none;
+
+    white-space: nowrap;
+
+    font-size: 0.95rem;
+    letter-spacing: 4px;
+  }
+
+}
