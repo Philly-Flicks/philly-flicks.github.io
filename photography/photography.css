@@ -726,3 +726,46 @@ img {
 body {
   -webkit-touch-callout: none;
 }
+
+/* ADD 38B - FINAL MOBILE PHOTOGRAPHY OVERRIDE */
+
+@media screen and (max-width: 600px) {
+
+  .hero-section {
+    min-height: 100vh;
+    padding: 45px 20px 90px;
+    position: relative;
+    justify-content: flex-start;
+  }
+
+  .hero-content h1 {
+    font-size: 3.15rem !important;
+    letter-spacing: -2px;
+    line-height: 0.85;
+    white-space: nowrap;
+  }
+
+  .hero-image {
+    height: 46vh;
+    margin-top: 35px;
+  }
+
+  .back-link,
+  .take-look {
+    position: absolute !important;
+    bottom: 35px !important;
+    transform: none !important;
+
+    font-size: 0.72rem !important;
+    letter-spacing: 2px !important;
+    white-space: nowrap;
+  }
+
+  .back-link {
+    left: 20px !important;
+  }
+
+  .take-look {
+    right: 20px !important;
+  }
+}
