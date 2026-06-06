@@ -491,3 +491,14 @@ body {
     right: 20px !important;
   }
 }
+
+/* MOBILE ONLY TITLE BREAK */
+
+@media screen and (max-width: 600px) {
+
+  .hero-content h1 {
+    max-width: 320px;
+    line-height: 0.85;
+  }
+
+}
