@@ -30,49 +30,61 @@
 
   </section>
 
-  <section class="photo-page collections-section" id="collections">
+  <!-- ADD 41: NEW PHOTOGRAPHY COLLECTIONS -->
 
-    <div class="collections-content animate">
+<section class="event-collections" id="collections">
 
-      <h2>COLLECTIONS</h2>
+    <div class="event-collections-header">
+        <h2>COLLECTIONS</h2>
+        <p>SELECT A COLLECTION</p>
+    </div>
 
-      <div class="collections-grid">
+    <div class="event-collections-grid" id="eventCollectionsGrid"></div>
 
-        <a href="#featured" class="collection-card">
-          <img src="images/featured.jpg" loading="lazy" alt="Featured photography">
-          <h3>FEATURED</h3>
-        </a>
+</section>
 
-        <a href="#portraits" class="collection-card">
-          <img src="images/portraits.jpg" loading="lazy" alt="Portrait photography">
-          <h3>PORTRAITS</h3>
-        </a>
 
-        <a href="#fashion" class="collection-card">
-          <img src="images/fashion.jpg" loading="lazy" alt="Fashion photography">
-          <h3>FASHION</h3>
-        </a>
+<!-- COLLECTION POPUP -->
 
-        <a href="#graduations" class="collection-card">
-          <img src="images/graduations.jpg" loading="lazy" alt="Graduation photography">
-          <h3>GRADUATIONS</h3>
-        </a>
+<div class="collection-modal" id="collectionModal">
 
-        <a href="#sports" class="collection-card">
-          <img src="images/sports.jpg" loading="lazy" alt="Sports photography">
-          <h3>SPORTS</h3>
-        </a>
+    <button class="collection-close" id="collectionClose" aria-label="Close gallery">
+        ×
+    </button>
 
-        <a href="#lifestyle" class="collection-card">
-          <img src="images/lifestyle.jpg" loading="lazy" alt="Lifestyle photography">
-          <h3>LIFESTYLE</h3>
-        </a>
+    <div class="collection-modal-info">
+        <h2 id="collectionTitle"></h2>
+        <p id="collectionDate"></p>
+        <p id="collectionPhotoCount"></p>
+    </div>
 
-      </div>
+    <button class="collection-arrow collection-prev" id="collectionPrev" aria-label="Previous photo">
+        &#10094;
+    </button>
+
+    <div class="collection-image-wrapper">
+
+        <div class="collection-loader" id="collectionLoader"></div>
+
+        <img
+            id="collectionImage"
+            class="collection-main-image"
+            src=""
+            alt=""
+            draggable="false"
+        >
 
     </div>
 
-  </section>
+    <button class="collection-arrow collection-next" id="collectionNext" aria-label="Next photo">
+        &#10095;
+    </button>
+
+    <div class="collection-counter" id="collectionCounter">
+        1 / 1
+    </div>
+
+</div>
 
   <section class="gallery-section" id="featured">
   <h2 class="gallery-heading animate">
