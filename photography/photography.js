@@ -159,3 +159,4 @@ photoGalleries.forEach(gallery => {
     gallery.appendChild(image);
   });
 });
+
