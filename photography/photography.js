@@ -194,7 +194,7 @@ const photographyCollections = [
         title: "All White Party",
         date: "August 22, 2026",
         folder: "all-white-party",
-        imageCount: 1
+        imageCount: 35
     },
 
     {
