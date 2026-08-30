@@ -1429,3 +1429,39 @@ body {
     margin-top: 35px;
   }
 }
+
+/* PHOTOGRAPHY HOMEPAGE BUTTONS */
+
+.hero-actions {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.hero-actions .take-look {
+  position: static;
+  right: auto;
+  bottom: auto;
+}
+
+@media (max-width: 600px) {
+  .hero-actions {
+    right: 20px;
+    bottom: 35px;
+    gap: 16px;
+  }
+
+  .hero-actions .take-look {
+    position: static !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+
+    font-size: 0.62rem !important;
+    letter-spacing: 1.5px !important;
+  }
+}
