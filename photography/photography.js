@@ -287,6 +287,12 @@ const collectionPrev =
 const collectionNext =
     document.getElementById("collectionNext");
 
+const previousCollectionButton =
+    document.getElementById("previousCollection");
+
+const nextCollectionButton =
+    document.getElementById("nextCollection");
+
 
 const collectionLoader =
     document.getElementById("collectionLoader");
@@ -596,7 +602,34 @@ function preloadNearbyPhotos() {
 
 }
 
+/* =====================================================
+   SWITCH BETWEEN COLLECTIONS
+===================================================== */
 
+function switchCollection(direction) {
+
+    if (!activeCollection) return;
+
+    const currentCollectionIndex =
+        photographyCollections.indexOf(activeCollection);
+
+    let newCollectionIndex =
+        currentCollectionIndex + direction;
+
+    if (newCollectionIndex >= photographyCollections.length) {
+        newCollectionIndex = 0;
+    }
+
+    if (newCollectionIndex < 0) {
+        newCollectionIndex =
+            photographyCollections.length - 1;
+    }
+
+    openCollection(
+        photographyCollections[newCollectionIndex]
+    );
+
+}
 
 /* =====================================================
    BUTTON CONTROLS
@@ -620,6 +653,16 @@ collectionClose.addEventListener(
     closeCollection
 );
 
+previousCollectionButton.addEventListener(
+    "click",
+    () => switchCollection(-1)
+);
+
+
+nextCollectionButton.addEventListener(
+    "click",
+    () => switchCollection(1)
+);
 
 
 /* =====================================================

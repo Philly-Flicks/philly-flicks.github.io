@@ -1321,3 +1321,38 @@ body {
     }
 
 }
+
+/* COLLECTION SWITCHING ARROWS */
+
+.collection-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.collection-switch-arrow {
+    background: none;
+    border: none;
+    color: white;
+
+    font-size: 0.8rem;
+    cursor: pointer;
+
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.collection-switch-arrow:hover {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .collection-title-row {
+        gap: 12px;
+    }
+
+    .collection-switch-arrow {
+        font-size: 0.65rem;
+    }
+}
