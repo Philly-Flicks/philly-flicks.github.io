@@ -201,168 +201,168 @@ const photographyCollections = [
         title: "Seattle Skyline — Manny",
         date: "August 20, 2026",
         folder: "seattle-skyline",
-        imageCount: 1
+        imageCount: 16
     },
 
     {
         title: "Back to School Barbering Event",
         date: "August 7, 2026",
         folder: "back-to-school-barbering",
-        imageCount: 1
+        imageCount: 11
     },
 
     {
         title: "Couple Shoot — Jasmine + Ethan",
         date: "June 15, 2026",
         folder: "jasmine-ethan",
-        imageCount: 1
+        imageCount: 20
     },
 
     {
         title: "Duo High School Grad",
         date: "June 13, 2026",
         folder: "duo-high-school-grad",
-        imageCount: 1
+        imageCount: 21
     },
 
     {
         title: "Everett Boardwalk",
         date: "May 25, 2026",
         folder: "everett-boardwalk",
-        imageCount: 1
+        imageCount: 10
     },
 
     {
         title: "Ife Grad",
         date: "May 20, 2026",
         folder: "ife-grad",
-        imageCount: 1
+        imageCount: 12
     },
 
     {
         title: "Couple Grad",
         date: "May 18, 2026",
         folder: "couple-grad",
-        imageCount: 1
+        imageCount: 23
     },
 
     {
         title: "Cesar Grad Photos",
         date: "May 16, 2026",
         folder: "cesar-grad",
-        imageCount: 1
+        imageCount: 10
     },
 
     {
         title: "Student Regent Grad Photos",
         date: "May 14, 2026",
         folder: "student-regent-grad",
-        imageCount: 1
+        imageCount: 20
     },
 
     {
         title: "Rico's Grad Photos",
         date: "May 7, 2026",
         folder: "rico-grad",
-        imageCount: 1
+        imageCount: 9
     },
 
     {
         title: "Grace's Grad Photos",
         date: "April 28, 2026",
         folder: "grace-grad",
-        imageCount: 1
+        imageCount: 19
     },
 
     {
         title: "AMDT Collections",
         date: "April 18, 2026",
         folder: "amdt-collections",
-        imageCount: 1
+        imageCount: 70
     },
 
     {
         title: "Murrow 50th Symposium",
         date: "April 6–8, 2026",
         folder: "murrow-50",
-        imageCount: 1
+        imageCount: 11
     },
 
     {
         title: "Art Show",
         date: "March 31, 2026",
         folder: "art-show",
-        imageCount: 1
+        imageCount: 19
     },
 
     {
         title: "Fashion Show — SEB",
         date: "March 11, 2026",
         folder: "seb-fashion-show",
-        imageCount: 1
+        imageCount: 17
     },
 
     {
         title: "Filipino Culture Night",
         date: "March 8, 2026",
         folder: "filipino-culture-night",
-        imageCount: 1
+        imageCount: 11
     },
 
     {
         title: "Spokane Shoot — Spence",
         date: "March 6, 2026",
         folder: "spokane-spence",
-        imageCount: 1
+        imageCount: 14
     },
 
     {
         title: "Cowboy Night",
         date: "January 22, 2026",
         folder: "cowboy-night",
-        imageCount: 1
+        imageCount: 9
     },
 
     {
         title: "Ethan Graduation",
         date: "November 16, 2025",
         folder: "ethan-graduation",
-        imageCount: 1
+        imageCount: 6
     },
 
     {
         title: "Corvette",
         date: "October 29, 2025",
         folder: "corvette",
-        imageCount: 1
+        imageCount: 10
     },
 
     {
         title: "BMW Dirt Rider",
         date: "September 19, 2025",
         folder: "bmw-dirt-rider",
-        imageCount: 1
+        imageCount: 10
     },
 
     {
         title: "Dark Academia",
         date: "September 9, 2025",
         folder: "dark-academia",
-        imageCount: 1
+        imageCount: 10
     },
 
     {
         title: "WSU Sports",
         date: "2024 — 2026",
         folder: "wsu-sports",
-        imageCount: 1
+        imageCount: 34
     },
 
     {
         title: "Nature Photos",
         date: "2024 — 2026",
         folder: "nature",
-        imageCount: 1
+        imageCount: 13
     }
 
 ];
