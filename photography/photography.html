@@ -46,37 +46,34 @@
 
 <!-- COLLECTION POPUP -->
 
-<div class="collection-modal" id="collectionModal">
+<div class="collection-modal-info">
 
-    <button class="collection-close" id="collectionClose" aria-label="Close gallery">
-        ×
-    </button>
+    <div class="collection-title-row">
 
-    <div class="collection-modal-info">
-        <div class="collection-title-row">
+        <button
+            class="collection-switch-arrow"
+            id="previousCollection"
+            aria-label="Previous collection"
+        >
+            &#10094;
+        </button>
 
-    <button
-        class="collection-switch-arrow"
-        id="previousCollection"
-        aria-label="Previous collection"
-    >
-        ◀
-    </button>
+        <h2 id="collectionTitle"></h2>
 
-    <h2 id="collectionTitle"></h2>
+        <button
+            class="collection-switch-arrow"
+            id="nextCollection"
+            aria-label="Next collection"
+        >
+            &#10095;
+        </button>
 
-    <button
-        class="collection-switch-arrow"
-        id="nextCollection"
-        aria-label="Next collection"
-    >
-        ▶
-    </button>
+    </div>
+
+    <p id="collectionDate"></p>
+    <p id="collectionPhotoCount"></p>
 
 </div>
-        <p id="collectionDate"></p>
-        <p id="collectionPhotoCount"></p>
-    </div>
 
     <button class="collection-arrow collection-prev" id="collectionPrev" aria-label="Previous photo">
         &#10094;
