@@ -48,49 +48,63 @@
 
 <div class="collection-modal" id="collectionModal">
 
-  <button class="collection-close" id="collectionClose">×</button>
+    <button class="collection-close" id="collectionClose" aria-label="Close gallery">
+        ×
+    </button>
 
-  <div class="collection-modal-info">
-
-    <div class="collection-title-row">
-      <button class="collection-switch-arrow" id="previousCollection">&#10094;</button>
-
-      <h2 id="collectionTitle"></h2>
-
-      <button class="collection-switch-arrow" id="nextCollection">&#10095;</button>
+    <div class="collection-modal-info">
+        <h2 id="collectionTitle"></h2>
+        <p id="collectionDate"></p>
+        <p id="collectionPhotoCount"></p>
     </div>
 
-    <p id="collectionDate"></p>
-    <p id="collectionPhotoCount"></p>
+    <button class="collection-arrow collection-prev" id="collectionPrev" aria-label="Previous photo">
+        &#10094;
+    </button>
 
-  </div>
+    <div class="collection-image-wrapper">
 
-  <button class="collection-arrow collection-prev" id="collectionPrev">
-    &#10094;
-  </button>
+        <div class="collection-loader" id="collectionLoader"></div>
 
-  <div class="collection-image-wrapper">
+        <img
+            id="collectionImage"
+            class="collection-main-image"
+            src=""
+            alt=""
+            draggable="false"
+        >
 
-    <div class="collection-loader" id="collectionLoader"></div>
+    </div>
 
-    <img
-      id="collectionImage"
-      class="collection-main-image"
-      src=""
-      alt=""
-      draggable="false"
-    >
+    <button class="collection-arrow collection-next" id="collectionNext" aria-label="Next photo">
+        &#10095;
+    </button>
 
-  </div>
+    <div class="collection-counter" id="collectionCounter">
+        1 / 1
+    </div>
 
-  <button class="collection-arrow collection-next" id="collectionNext">
-    &#10095;
-  </button>
+</div>
 
-  <div class="collection-counter" id="collectionCounter">
-    1 / 1
-  </div>
 
+  <a href="#collections" class="back-to-collections">
+    BACK TO THE TOP ▲
+</a>
+
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close">&times;</button>
+
+  <button class="lightbox-arrow lightbox-prev">◀</button>
+
+  <div class="loader" id="loader"></div>
+
+  <img src="" loading="lazy" alt="Expanded gallery photo" id="lightbox-img">
+
+  <button class="lightbox-arrow lightbox-next">▶</button>
+
+  <p class="lightbox-counter" id="lightbox-counter">1 / 1</p>
 </div>
 
   <script src="photography.js"></script>
