@@ -1465,3 +1465,43 @@ body {
     letter-spacing: 1.5px !important;
   }
 }
+
+/* FIX HOMEPAGE BUTTON OVERLAP */
+
+.hero-actions {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  gap: 35px;
+
+  z-index: 5;
+}
+
+.hero-actions .take-look {
+  position: static !important;
+  inset: auto !important;
+  transform: none !important;
+
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .hero-actions {
+    right: 20px;
+    bottom: 35px;
+    gap: 18px;
+  }
+
+  .hero-actions .take-look {
+    position: static !important;
+    inset: auto !important;
+
+    font-size: 0.62rem !important;
+    letter-spacing: 1.5px !important;
+  }
+}
