@@ -1505,3 +1505,52 @@ body {
     letter-spacing: 1.5px !important;
   }
 }
+
+/* BUNDLE BOOKING BUTTON */
+
+.bundle-booking {
+  width: 100%;
+  margin-top: 65px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.bundle-booking-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 260px;
+  padding: 22px 45px;
+
+  background: #050505;
+  border: 2px solid #050505;
+  color: white;
+
+  text-decoration: none;
+  text-align: center;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+
+  transition: 0.3s ease;
+}
+
+.bundle-booking-button:hover {
+  background: transparent;
+  color: #050505;
+}
+
+@media (max-width: 600px) {
+  .bundle-booking {
+    margin-top: 45px;
+  }
+
+  .bundle-booking-button {
+    width: 100%;
+    min-width: 0;
+    padding: 20px;
+  }
+}
