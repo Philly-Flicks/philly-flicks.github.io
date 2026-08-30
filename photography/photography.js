@@ -445,7 +445,7 @@ photographyCollections.forEach((collection) => {
         <div class="event-collection-cover">
 
             <img
-                src="../images/photography/collections/${collection.folder}/cover.jpg"
+                src="/images/photography/collections/${collection.folder}/cover.jpg"
                 alt="${collection.title}"
                 loading="lazy"
             >
@@ -545,7 +545,7 @@ function showCollectionPhoto() {
 
     const imagePath =
 
-        `../images/photography/collections/${activeCollection.folder}/${currentPhotoIndex}.jpg`;
+        `/images/photography/collections/${activeCollection.folder}/${currentPhotoIndex}.jpg`;
 
 
     collectionImage.onload = () => {
@@ -709,7 +709,7 @@ function preloadNearbyPhotos() {
 
     nextImage.src =
 
-        `../images/photography/collections/${activeCollection.folder}/${nextIndex}.jpg`;
+        `/images/photography/collections/${activeCollection.folder}/${nextIndex}.jpg`;
 
 
     const previousImage =
@@ -718,7 +718,7 @@ function preloadNearbyPhotos() {
 
     previousImage.src =
 
-        `../images/photography/collections/${activeCollection.folder}/${previousIndex}.jpg`;
+        `/images/photography/collections/${activeCollection.folder}/${previousIndex}.jpg`;
 
 }
 
