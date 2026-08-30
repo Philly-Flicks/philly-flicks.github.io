@@ -198,7 +198,7 @@ const photographyCollections = [
     },
 
     {
-        title: "Seattle Skyline — Manny",
+        title: "Seattle Skyline",
         date: "August 20, 2026",
         folder: "seattle-skyline",
         imageCount: 16
@@ -212,70 +212,70 @@ const photographyCollections = [
     },
 
     {
-        title: "Couple Shoot — Jasmine + Ethan",
+        title: "Pinky Promise",
         date: "June 15, 2026",
         folder: "jasmine-ethan",
         imageCount: 20
     },
 
     {
-        title: "Duo High School Grad",
+        title: "Duo High School Graduation",
         date: "June 13, 2026",
         folder: "duo-high-school-grad",
         imageCount: 21
     },
 
     {
-        title: "Everett Boardwalk",
+        title: "Boardwalk",
         date: "May 25, 2026",
         folder: "everett-boardwalk",
         imageCount: 10
     },
 
     {
-        title: "Ife Grad",
+        title: "Ife Graduation",
         date: "May 20, 2026",
         folder: "ife-grad",
         imageCount: 12
     },
 
     {
-        title: "Couple Grad",
+        title: "Couple Graduation",
         date: "May 18, 2026",
         folder: "couple-grad",
         imageCount: 23
     },
 
     {
-        title: "Cesar Grad Photos",
+        title: "Cesar Graduation",
         date: "May 16, 2026",
         folder: "cesar-grad",
         imageCount: 10
     },
 
     {
-        title: "Student Regent Grad Photos",
+        title: "WSU Student Regent Graduation",
         date: "May 14, 2026",
         folder: "student-regent-grad",
         imageCount: 20
     },
 
     {
-        title: "Rico's Grad Photos",
+        title: "Pico Graduation",
         date: "May 7, 2026",
         folder: "rico-grad",
         imageCount: 9
     },
 
     {
-        title: "Grace's Grad Photos",
+        title: "Grace Graduation",
         date: "April 28, 2026",
         folder: "grace-grad",
         imageCount: 19
     },
 
     {
-        title: "AMDT Collections",
+        title: "AMDT Fashion Show",
         date: "April 18, 2026",
         folder: "amdt-collections",
         imageCount: 70
@@ -289,14 +289,14 @@ const photographyCollections = [
     },
 
     {
-        title: "Art Show",
+        title: "Art Exhibit",
         date: "March 31, 2026",
         folder: "art-show",
         imageCount: 19
     },
 
     {
-        title: "Fashion Show — SEB",
+        title: "SEB Fashion Show",
         date: "March 11, 2026",
         folder: "seb-fashion-show",
         imageCount: 17
@@ -310,7 +310,7 @@ const photographyCollections = [
     },
 
     {
-        title: "Spokane Shoot — Spence",
+        title: "A Day In Spokane",
         date: "March 6, 2026",
         folder: "spokane-spence",
         imageCount: 14
@@ -331,14 +331,14 @@ const photographyCollections = [
     },
 
     {
-        title: "Corvette",
+        title: "Corvette Corvette",
         date: "October 29, 2025",
         folder: "corvette",
         imageCount: 10
     },
 
     {
-        title: "BMW Dirt Rider",
+        title: "Dirt Rider",
         date: "September 19, 2025",
         folder: "bmw-dirt-rider",
         imageCount: 10
@@ -352,14 +352,14 @@ const photographyCollections = [
     },
 
     {
-        title: "WSU Sports",
+        title: "Sports Collection",
         date: "2024 — 2026",
         folder: "wsu-sports",
         imageCount: 34
     },
 
     {
-        title: "Nature Photos",
+        title: "Nature Collection",
         date: "2024 — 2026",
         folder: "nature",
         imageCount: 13
