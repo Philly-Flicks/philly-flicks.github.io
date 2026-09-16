@@ -809,90 +809,98 @@ function handleCollectionSwipe() {
    ADD 42 — BOOKING MODAL CONTROLS
 ===================================================== */
 
-const bookNowButton =
-    document.getElementById("bookNowButton");
+document.addEventListener("DOMContentLoaded", function () {
 
-const bookingModal =
-    document.getElementById("bookingModal");
+    const bookNowButton =
+        document.getElementById("bookNowButton");
 
-const bookingClose =
-    document.getElementById("bookingClose");
+    const bookingModal =
+        document.getElementById("bookingModal");
 
-const bookingOverlay =
-    document.getElementById("bookingOverlay");
+    const bookingClose =
+        document.getElementById("bookingClose");
 
-const bookingForm =
-    document.getElementById("bookingForm");
+    const bookingOverlay =
+        document.getElementById("bookingOverlay");
 
-const bookingDate =
-    document.getElementById("bookingDate");
+    const bookingForm =
+        document.getElementById("bookingForm");
 
-
-/* =====================================================
-   PREVENT PAST DATES
-===================================================== */
-
-function setMinimumBookingDate() {
-
-    const today = new Date();
-
-    const year =
-        today.getFullYear();
-
-    const month =
-        String(today.getMonth() + 1)
-        .padStart(2, "0");
-
-    const day =
-        String(today.getDate())
-        .padStart(2, "0");
-
-    bookingDate.min =
-        `${year}-${month}-${day}`;
-
-}
-
-setMinimumBookingDate();
+    const bookingDate =
+        document.getElementById("bookingDate");
 
 
+    /* ================================================
+       CHECK THAT EVERYTHING EXISTS
+    ================================================= */
 
-/* =====================================================
-   OPEN BOOKING FORM
-===================================================== */
+    if (!bookNowButton) {
+        console.error("BOOK NOW button not found.");
+        return;
+    }
 
-function openBookingModal() {
-
-    bookingModal.classList.add("active");
-
-    document.body.style.overflow = "hidden";
-
-}
-
-
-
-/* =====================================================
-   CLOSE BOOKING FORM
-===================================================== */
-
-function closeBookingModal() {
-
-    bookingModal.classList.remove("active");
-
-    document.body.style.overflow = "";
-
-}
+    if (!bookingModal) {
+        console.error("Booking modal not found.");
+        return;
+    }
 
 
+    /* ================================================
+       PREVENT PAST DATES
+    ================================================= */
 
-/* =====================================================
-   BOOK NOW BUTTON
-===================================================== */
+    if (bookingDate) {
 
-if (bookNowButton) {
+        const today = new Date();
+
+        const year =
+            today.getFullYear();
+
+        const month =
+            String(today.getMonth() + 1)
+            .padStart(2, "0");
+
+        const day =
+            String(today.getDate())
+            .padStart(2, "0");
+
+        bookingDate.min =
+            `${year}-${month}-${day}`;
+
+    }
+
+
+    /* ================================================
+       OPEN
+    ================================================= */
+
+    function openBookingModal() {
+
+        bookingModal.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+
+    }
+
+
+    /* ================================================
+       CLOSE
+    ================================================= */
+
+    function closeBookingModal() {
+
+        bookingModal.classList.remove("active");
+
+        document.body.style.overflow = "";
+
+    }
+
+
+    /* BOOK NOW */
 
     bookNowButton.addEventListener(
         "click",
-        function(event) {
+        function (event) {
 
             event.preventDefault();
 
@@ -901,75 +909,69 @@ if (bookNowButton) {
         }
     );
 
-}
 
+    /* X */
 
+    if (bookingClose) {
 
-/* =====================================================
-   X BUTTON
-===================================================== */
-
-bookingClose.addEventListener(
-    "click",
-    closeBookingModal
-);
-
-
-
-/* =====================================================
-   CLICK OUTSIDE FORM
-===================================================== */
-
-bookingOverlay.addEventListener(
-    "click",
-    closeBookingModal
-);
-
-
-
-/* =====================================================
-   ESCAPE KEY
-===================================================== */
-
-document.addEventListener(
-    "keydown",
-    function(event) {
-
-        if (
-            event.key === "Escape" &&
-            bookingModal.classList.contains("active")
-        ) {
-
-            closeBookingModal();
-
-        }
-
-    }
-);
-
-
-
-/* =====================================================
-   FORM SUBMISSION
-   EMAIL CONNECTION COMES NEXT
-===================================================== */
-
-bookingForm.addEventListener(
-    "submit",
-    function(event) {
-
-        event.preventDefault();
-
-        /*
-        We intentionally aren't sending anything yet.
-
-        Next step:
-        Connect this form to your booking email system.
-        */
-
-        console.log(
-            "Booking form is valid and ready to send."
+        bookingClose.addEventListener(
+            "click",
+            closeBookingModal
         );
 
     }
-);
+
+
+    /* CLICK DARK BACKGROUND */
+
+    if (bookingOverlay) {
+
+        bookingOverlay.addEventListener(
+            "click",
+            closeBookingModal
+        );
+
+    }
+
+
+    /* ESC */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Escape" &&
+                bookingModal.classList.contains("active")
+            ) {
+
+                closeBookingModal();
+
+            }
+
+        }
+    );
+
+
+    /* ================================================
+       FORM
+    ================================================= */
+
+    if (bookingForm) {
+
+        bookingForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+                console.log(
+                    "Booking request ready to send."
+                );
+
+            }
+        );
+
+    }
+
+});
