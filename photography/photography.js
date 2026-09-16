@@ -65,6 +65,13 @@ images/
 const photographyCollections = [
 
     {
+    title: "Birthday at Harborview",
+    date: "September 9, 2026",
+    folder: "birthday-harborview",
+    imageCount: 20
+},
+    
+    {
         title: "All White Party",
         date: "August 22, 2026",
         folder: "all-white-party",
