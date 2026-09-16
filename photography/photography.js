@@ -86,7 +86,7 @@ const photographyCollections = [
     },
 
     {
-        title: "Back to School Barbering Event",
+        title: "Back 2 School Barbering Event",
         date: "August 7, 2026",
         folder: "back-to-school-barbering",
         imageCount: 11
