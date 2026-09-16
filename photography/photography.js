@@ -970,10 +970,47 @@ if (bookingForm) {
             submitButton.textContent;
 
         submitButton.disabled = true;
-        submitButton.textContent = "SENDING...";
+submitButton.textContent = "SENDING...";
 
-        const formData =
-            new FormData(bookingForm);
+
+/* ================================================
+   ADD 46 — FORMAT TIME TO 12-HOUR AM/PM
+================================================= */
+
+const bookingTime =
+    document.getElementById("bookingTime");
+
+let formattedTime = bookingTime.value;
+
+if (bookingTime.value) {
+
+    const [hours, minutes] =
+        bookingTime.value.split(":");
+
+    const hourNumber =
+        Number(hours);
+
+    const period =
+        hourNumber >= 12 ? "PM" : "AM";
+
+    const regularHour =
+        hourNumber % 12 || 12;
+
+    formattedTime =
+        `${regularHour}:${minutes} ${period}`;
+
+}
+
+
+/* CREATE FORM DATA */
+
+const formData =
+    new FormData(bookingForm);
+
+formData.set(
+    "time",
+    formattedTime
+);
 
         try {
 
