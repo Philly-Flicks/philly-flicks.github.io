@@ -162,9 +162,9 @@
   </div>
 
   <div class="bundle-booking">
-  <a href="https://phillyflicksmedia.com/contact/contact.html" class="bundle-booking-button">
+  <a href="#" class="book-now" id="bookNowButton">
     BOOK NOW
-  </a>
+</a>
 </div>
 
 </section>
@@ -233,5 +233,227 @@
 </div>
 
   <script src="photography.js"></script>
+
+  <!-- =====================================================
+     ADD 42 — BOOKING REQUEST MODAL
+===================================================== -->
+
+<div class="booking-modal" id="bookingModal">
+
+    <div class="booking-overlay" id="bookingOverlay"></div>
+
+    <div class="booking-window">
+
+        <button
+            class="booking-close"
+            id="bookingClose"
+            type="button"
+            aria-label="Close booking form">
+            &times;
+        </button>
+
+        <div class="booking-heading">
+            <p class="booking-eyebrow">PHILLY FLICKS</p>
+            <h2>BOOK A SESSION</h2>
+            <p class="booking-subtitle">
+                Submit a request for your photoshoot.
+                All bookings are requests until approved.
+            </p>
+        </div>
+
+
+        <form id="bookingForm">
+
+            <!-- NAME -->
+            <div class="booking-field">
+                <label for="bookingName">NAME</label>
+
+                <input
+                    type="text"
+                    id="bookingName"
+                    name="name"
+                    placeholder="Your name"
+                    autocomplete="name"
+                    required>
+            </div>
+
+
+            <!-- EMAIL -->
+            <div class="booking-field">
+                <label for="bookingEmail">EMAIL</label>
+
+                <input
+                    type="email"
+                    id="bookingEmail"
+                    name="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required>
+            </div>
+
+
+            <!-- PHONE -->
+            <div class="booking-field">
+                <label for="bookingPhone">PHONE NUMBER</label>
+
+                <input
+                    type="tel"
+                    id="bookingPhone"
+                    name="phone"
+                    placeholder="(555) 555-5555"
+                    autocomplete="tel"
+                    required>
+            </div>
+
+
+            <!-- BUNDLE -->
+            <div class="booking-field">
+
+                <label for="bookingBundle">
+                    PREFERRED BUNDLE
+                </label>
+
+                <select
+                    id="bookingBundle"
+                    name="bundle"
+                    required>
+
+                    <option value="" selected disabled>
+                        Select a bundle
+                    </option>
+
+                    <!-- CHANGE THESE FOUR NAMES LATER -->
+
+                    <option value="Bundle 1">
+                        Bundle 1
+                    </option>
+
+                    <option value="Bundle 2">
+                        Bundle 2
+                    </option>
+
+                    <option value="Bundle 3">
+                        Bundle 3
+                    </option>
+
+                    <option value="Bundle 4">
+                        Bundle 4
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- PEOPLE -->
+            <div class="booking-field">
+
+                <label for="bookingPeople">
+                    NUMBER OF PEOPLE
+                </label>
+
+                <select
+                    id="bookingPeople"
+                    name="people"
+                    required>
+
+                    <option value="" selected disabled>
+                        Select number of people
+                    </option>
+
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5+">5+</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- DATE + TIME -->
+            <div class="booking-row">
+
+                <div class="booking-field">
+
+                    <label for="bookingDate">
+                        PREFERRED DATE
+                    </label>
+
+                    <input
+                        type="date"
+                        id="bookingDate"
+                        name="date"
+                        required>
+
+                </div>
+
+
+                <div class="booking-field">
+
+                    <label for="bookingTime">
+                        PREFERRED TIME
+                    </label>
+
+                    <input
+                        type="time"
+                        id="bookingTime"
+                        name="time"
+                        required>
+
+                </div>
+
+            </div>
+
+
+            <!-- PHOTOSHOOT TYPE -->
+            <div class="booking-field">
+
+                <label for="bookingMessage">
+                    WHAT TYPE OF PHOTOSHOOT?
+                </label>
+
+                <textarea
+                    id="bookingMessage"
+                    name="photoshoot"
+                    rows="5"
+                    placeholder="Tell me about the photoshoot you're looking for..."
+                    required></textarea>
+
+            </div>
+
+
+            <!-- AGREEMENT -->
+            <label class="booking-agreement">
+
+                <input
+                    type="checkbox"
+                    id="bookingAgreement"
+                    required>
+
+                <span>
+                    I understand that submitting this request does not
+                    confirm my booking. My session is only confirmed
+                    after the requested date and time have been approved.
+                </span>
+
+            </label>
+
+
+            <!-- SUBMIT -->
+            <button
+                type="submit"
+                class="booking-submit">
+
+                REQUEST BOOKING
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
 </body>
 </html>

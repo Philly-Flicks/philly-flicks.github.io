@@ -1554,3 +1554,357 @@ body {
     padding: 20px;
   }
 }
+
+/* =====================================================
+   ADD 42 — BOOKING REQUEST MODAL
+===================================================== */
+
+.booking-modal {
+    position: fixed;
+    inset: 0;
+
+    z-index: 100000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+
+.booking-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* DARK BACKGROUND */
+
+.booking-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.88);
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* WINDOW */
+
+.booking-window {
+    position: relative;
+
+    width: min(700px, 100%);
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #080808;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    padding: 55px 55px 50px;
+
+    color: white;
+
+    z-index: 2;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.6);
+}
+
+
+/* CLOSE */
+
+.booking-close {
+    position: absolute;
+
+    top: 15px;
+    right: 22px;
+
+    border: none;
+    background: none;
+
+    color: white;
+
+    font-size: 2.2rem;
+    font-weight: 200;
+
+    cursor: pointer;
+
+    opacity: 0.7;
+
+    transition: opacity 0.2s ease;
+}
+
+
+.booking-close:hover {
+    opacity: 1;
+}
+
+
+/* HEADING */
+
+.booking-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+
+.booking-eyebrow {
+    margin: 0 0 10px;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.35em;
+
+    opacity: 0.5;
+}
+
+
+.booking-heading h2 {
+    margin: 0;
+
+    font-size: clamp(2.2rem, 5vw, 4rem);
+
+    letter-spacing: 0.04em;
+}
+
+
+.booking-subtitle {
+    max-width: 450px;
+
+    margin: 15px auto 0;
+
+    font-size: 0.85rem;
+
+    line-height: 1.7;
+
+    opacity: 0.6;
+}
+
+
+/* FORM */
+
+.booking-field {
+    margin-bottom: 25px;
+}
+
+
+.booking-field label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.18em;
+
+    opacity: 0.7;
+}
+
+
+.booking-field input,
+.booking-field select,
+.booking-field textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    background: #0d0d0d;
+
+    color: white;
+
+    padding: 15px 16px;
+
+    font-family: inherit;
+
+    font-size: 0.9rem;
+
+    outline: none;
+
+    border-radius: 0;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.booking-field input:focus,
+.booking-field select:focus,
+.booking-field textarea:focus {
+    border-color: rgba(255,255,255,0.75);
+
+    background: #111;
+}
+
+
+.booking-field textarea {
+    resize: vertical;
+
+    min-height: 130px;
+
+    line-height: 1.6;
+}
+
+
+/* SELECT OPTIONS */
+
+.booking-field select option {
+    background: #111;
+    color: white;
+}
+
+
+/* DATE + TIME */
+
+.booking-row {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* CALENDAR ICON */
+
+.booking-field input[type="date"],
+.booking-field input[type="time"] {
+    color-scheme: dark;
+}
+
+
+/* AGREEMENT */
+
+.booking-agreement {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 13px;
+
+    margin: 10px 0 30px;
+
+    cursor: pointer;
+
+    font-size: 0.72rem;
+
+    line-height: 1.6;
+
+    color: rgba(255,255,255,0.65);
+}
+
+
+.booking-agreement input {
+    width: 17px;
+    height: 17px;
+
+    flex: 0 0 17px;
+
+    margin-top: 2px;
+
+    accent-color: white;
+
+    cursor: pointer;
+}
+
+
+/* SUBMIT */
+
+.booking-submit {
+    width: 100%;
+
+    padding: 18px;
+
+    border: 1px solid white;
+
+    background: white;
+
+    color: black;
+
+    font-family: inherit;
+
+    font-size: 0.7rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.22em;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+
+.booking-submit:hover {
+    background: transparent;
+    color: white;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .booking-modal {
+        padding: 0;
+        align-items: flex-end;
+    }
+
+
+    .booking-window {
+        width: 100%;
+
+        max-height: 94vh;
+
+        padding:
+            50px
+            22px
+            35px;
+
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+    }
+
+
+    .booking-heading {
+        margin-bottom: 35px;
+    }
+
+
+    .booking-heading h2 {
+        font-size: 2.5rem;
+    }
+
+
+    .booking-row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+
+    .booking-close {
+        right: 17px;
+    }
+
+}
