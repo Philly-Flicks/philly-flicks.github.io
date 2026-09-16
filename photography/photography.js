@@ -954,24 +954,90 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* ================================================
-       FORM
-    ================================================= */
+   ADD 44 — SEND BOOKING REQUEST
+================================================= */
 
-    if (bookingForm) {
+if (bookingForm) {
 
-        bookingForm.addEventListener(
-            "submit",
-            function (event) {
+    bookingForm.addEventListener("submit", async function (event) {
 
-                event.preventDefault();
+        event.preventDefault();
 
-                console.log(
-                    "Booking request ready to send."
+        const submitButton =
+            bookingForm.querySelector(".booking-submit");
+
+        const originalButtonText =
+            submitButton.textContent;
+
+        submitButton.disabled = true;
+        submitButton.textContent = "SENDING...";
+
+        const formData =
+            new FormData(bookingForm);
+
+        try {
+
+            const response = await fetch(
+                "https://api.web3forms.com/submit",
+                {
+                    method: "POST",
+                    body: formData
+                }
+            );
+
+            const result = await response.json();
+
+            if (result.success) {
+
+                bookingForm.reset();
+
+                bookingForm.innerHTML = `
+                    <div class="booking-success">
+
+                        <div class="booking-success-check">
+                            ✓
+                        </div>
+
+                        <h3>REQUEST RECEIVED</h3>
+
+                        <p>
+                            Your booking request has been sent!
+                        </p>
+
+                        <p>
+                            Your session is not confirmed until
+                            the requested date and time have been
+                            approved.
+                        </p>
+
+                    </div>
+                `;
+
+            } else {
+
+                throw new Error(
+                    result.message || "Submission failed."
                 );
 
             }
-        );
 
-    }
+        } catch (error) {
 
-});
+            console.error(
+                "Booking submission error:",
+                error
+            );
+
+            alert(
+                "Something went wrong while sending your booking request. Please try again."
+            );
+
+            submitButton.disabled = false;
+            submitButton.textContent =
+                originalButtonText;
+
+        }
+
+    });
+
+}
