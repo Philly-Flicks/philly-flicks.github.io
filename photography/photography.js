@@ -1004,10 +1004,9 @@ if (bookingForm) {
                             Your booking request has been sent!
                         </p>
 
+
                         <p>
-                            Your session is not confirmed until
-                            the requested date and time have been
-                            approved.
+                            You will receive an email when your session is approved.
                         </p>
 
                     </div>
